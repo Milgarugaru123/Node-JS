@@ -1,0 +1,157 @@
+/* fonts */
+
+@font-face {
+  font-family: "JejuStoneWall";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:400");
+
+@font-face {
+  font-family: "KerisKedyuche";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_R.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KerisKedyuche";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_B.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* main css */
+
+main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tap_sign {
+  color: rgb(32, 204, 195);
+  width: 100%;
+  /* font-family: "JejuStoneWall"; */
+  font-family: "KerisKedyuche";
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: -12lvh;
+  transition: all 1s;
+}
+
+.tap_move {
+  transform: translateY(2lvh);
+}
+
+.card {
+  height: 300px;
+  aspect-ratio: 4 / 3;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: rgb(80, 80, 80);
+  margin: 25lvh auto 0;
+  transition: all 1s;
+  position: relative;
+  z-index: 0;
+}
+
+.move_down {
+  transform: translateY(200px);
+}
+
+.card > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  position: absolute;
+  transition: all 1s;
+}
+
+.top {
+  background-color: rgb(160, 160, 160);
+  clip-path: polygon(0% 0%, 0% 5%, 50% 45%, 100% 5%, 100% 0%);
+  top: 0;
+  z-index: 2;
+}
+
+.top_open {
+  background-color: rgb(80, 80, 80);
+  clip-path: polygon(0% 100%, 0% 90%, 50% 55%, 100% 90%, 100% 100%);
+  top: -97%;
+  z-index: 0;
+}
+
+.line {
+  background-color: rgb(23, 184, 196);
+  clip-path: polygon(0% 5%, 50% 45%, 100% 5%, 100% 7%, 50% 47%, 0% 7%);
+  top: 0;
+  z-index: 3;
+}
+
+.letter {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2.2em;
+  text-decoration-line: underline;
+  text-decoration-color: rgb(80, 184, 153);
+  text-underline-offset: 0.7em;
+  word-break: keep-all;
+  width: 80%;
+  height: 80%;
+  border: 1px solid black;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background-color: rgb(255, 246, 229);
+  z-index: 1;
+  padding: 10px;
+  padding-bottom: 10lvh;
+  margin: 5% auto 0;
+  transition: all 1s;
+}
+
+.letter > div {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.letter > span {
+  display: block;
+  text-align: end;
+  margin-top: 12px;
+}
+
+.letter_blur {
+  opacity: 0.3;
+}
+
+.move_up {
+  transform: translateY(-150px);
+}
+
+.bottom {
+  height: 100%;
+  background-color: gray;
+  clip-path: polygon(0% 7%, 0% 100%, 100% 100%, 100% 7%, 50% 47%);
+  bottom: 0;
+  z-index: 2;
+}
+
+.bottom > div {
+  color: rgb(19, 0, 37);
+  font-size: 32px;
+  font-weight: 500;
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  transition: all 0.5s;
+}
