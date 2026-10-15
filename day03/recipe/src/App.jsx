@@ -1040,7 +1040,7 @@ const recipeData = [
     mealType: ["Beverage"],
   },
 ];
-console.log([...new Set(recipeData.map((x) => (x = x.difficulty)))]);
+console.log([...new Set(recipeData.map((x) => x.difficulty))]);
 
 /* name, difficulty, image, rating, reviewCount */
 const App = () => {

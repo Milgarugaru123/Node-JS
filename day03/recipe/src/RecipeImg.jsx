@@ -3,7 +3,7 @@ const RecipeImg = (props) => {
     <img
       src={props.image}
       alt={props.name}
-      style={{ width: `100%`, aspectRatio: `4 / 3`, fitObject: `cover` }}
+      style={{ width: `100%`, aspectRatio: `4 / 3`, objectFit: `cover` }}
     />
   );
 };
